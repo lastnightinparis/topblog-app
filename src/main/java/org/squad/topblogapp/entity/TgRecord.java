@@ -11,7 +11,7 @@ import lombok.Data;
 @Entity
 @Table(name = "tg_record")
 @Data
-public class TgRecord {
+public class TgRecord extends Record {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
