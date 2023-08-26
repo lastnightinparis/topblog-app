@@ -17,9 +17,10 @@ public class ZnService {
     private CsvProperties csvProperties;
 
     //todo send image to ML model, get answer and convert to domain model
-    public Long uploadZnImage(MultipartFile image){
+    public Long uploadZnImage(MultipartFile image, String znLink){
         ZnRecord znRecord = new ZnRecord();
 
+        znRecord.setZn_link(znLink);
         znRecord.setImage(image.getOriginalFilename());
         znRecord.setMetric(1L);
 

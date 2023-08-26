@@ -24,8 +24,9 @@ public class TgController {
     private CsvService csvService;
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public Long uploadTgImage(@RequestParam(name = "image") MultipartFile image) {
-        return tgService.uploadTgImage(image);
+    public Long uploadTgImage(@RequestParam(name = "image") MultipartFile image,
+                              @RequestParam(name = "vk_link") String tgLink) {
+        return tgService.uploadTgImage(image, tgLink);
     }
 
     @GetMapping(value = "/download", produces = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
