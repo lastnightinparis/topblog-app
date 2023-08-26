@@ -25,7 +25,7 @@ public class ZnController {
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public Long uploadZnImage(@RequestParam(name = "image") MultipartFile image,
-                              @RequestParam(name = "vk_link") String znLink) {
+                              @RequestParam(name = "platform_link") String znLink) {
         return znService.uploadZnImage(image, znLink);
     }
 

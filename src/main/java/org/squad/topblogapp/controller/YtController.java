@@ -25,7 +25,7 @@ public class YtController {
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public Long uploadYtImage(@RequestParam(name = "image") MultipartFile image,
-                              @RequestParam(name = "vk_link") String ytLink) {
+                              @RequestParam(name = "platform_link") String ytLink) {
         return ytService.uploadYtImage(image, ytLink);
     }
 
