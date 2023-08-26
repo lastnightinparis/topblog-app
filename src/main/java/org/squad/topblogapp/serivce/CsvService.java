@@ -52,7 +52,8 @@ public class CsvService {
     }
     public byte[] getWorkbook(String filename) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        Workbook workbook = csvService.getWorkbook(filename);
+        FileInputStream fis = new FileInputStream(filename);
+        Workbook workbook = WorkbookFactory.create(fis);
         try {
             workbook.write(bos);
         } catch (IOException e) {
