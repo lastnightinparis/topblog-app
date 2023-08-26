@@ -26,7 +26,7 @@ public class VkController {
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public Long uploadVkImage(@RequestParam(name = "image") MultipartFile image,
-                              @RequestParam(name = "vk_link") String vkLink) {
+                              @RequestParam(name = "platform_link") String vkLink) {
         return vkService.uploadVkImage(image, vkLink);
     }
 
