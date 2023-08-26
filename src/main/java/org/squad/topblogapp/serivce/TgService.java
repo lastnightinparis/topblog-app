@@ -17,9 +17,10 @@ public class TgService {
     private CsvProperties csvProperties;
 
     //todo send image to ML model, get answer and convert to domain model
-    public Long uploadTgImage(MultipartFile image){
+    public Long uploadTgImage(MultipartFile image, String tgLink){
         TgRecord tgRecord = new TgRecord();
 
+        tgRecord.setTg_link(tgLink);
         tgRecord.setImage(image.getOriginalFilename());
         tgRecord.setMetric(1L);
 

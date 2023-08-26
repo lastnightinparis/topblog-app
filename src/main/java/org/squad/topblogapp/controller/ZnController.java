@@ -24,8 +24,9 @@ public class ZnController {
     private CsvService csvService;
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public Long uploadZnImage(@RequestParam(name = "image") MultipartFile image) {
-        return znService.uploadZnImage(image);
+    public Long uploadZnImage(@RequestParam(name = "image") MultipartFile image,
+                              @RequestParam(name = "vk_link") String znLink) {
+        return znService.uploadZnImage(image, znLink);
     }
 
     @GetMapping(value = "/download", produces = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")

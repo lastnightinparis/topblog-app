@@ -15,6 +15,8 @@ public class VkRecord extends Record {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+    @Column(name = "vk_link", nullable = false)
+    private String vk_link;
     @Column(name = "image", nullable = false)
     private String image;
     @Column(name = "metric", nullable = false)

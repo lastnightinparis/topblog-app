@@ -24,8 +24,9 @@ public class YtController {
     private CsvService csvService;
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public Long uploadYtImage(@RequestParam(name = "image") MultipartFile image) {
-        return ytService.uploadYtImage(image);
+    public Long uploadYtImage(@RequestParam(name = "image") MultipartFile image,
+                              @RequestParam(name = "vk_link") String ytLink) {
+        return ytService.uploadYtImage(image, ytLink);
     }
 
     @GetMapping(value = "/download", produces = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")

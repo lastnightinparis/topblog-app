@@ -17,9 +17,10 @@ public class YtService {
     private CsvProperties csvProperties;
 
     //todo send image to ML model, get answer and convert to domain model
-    public Long uploadYtImage(MultipartFile image){
+    public Long uploadYtImage(MultipartFile image, String ytLink){
         YtRecord ytRecord = new YtRecord();
 
+        ytRecord.setYt_link(ytLink);
         ytRecord.setImage(image.getOriginalFilename());
         ytRecord.setMetric(1L);
 

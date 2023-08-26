@@ -25,8 +25,9 @@ public class VkController {
     private CsvService csvService;
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public Long uploadVkImage(@RequestParam(name = "image") MultipartFile image) {
-        return vkService.uploadVkImage(image);
+    public Long uploadVkImage(@RequestParam(name = "image") MultipartFile image,
+                              @RequestParam(name = "vk_link") String vkLink) {
+        return vkService.uploadVkImage(image, vkLink);
     }
 
     @GetMapping(value = "/download", produces = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")

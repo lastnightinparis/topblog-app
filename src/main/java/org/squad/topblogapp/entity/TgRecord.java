@@ -15,6 +15,8 @@ public class TgRecord extends Record {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+    @Column(name = "tg_link", nullable = false)
+    private String tg_link;
     @Column(name = "image", nullable = false)
     private String image;
     @Column(name = "metric", nullable = false)
