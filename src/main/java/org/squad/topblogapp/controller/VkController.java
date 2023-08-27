@@ -1,6 +1,5 @@
 package org.squad.topblogapp.controller;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 import org.springframework.http.MediaType;
