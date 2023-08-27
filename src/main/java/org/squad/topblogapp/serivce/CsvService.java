@@ -26,7 +26,7 @@ import lombok.AllArgsConstructor;
 public class CsvService {
 
     private CsvProperties csvProperties;
-    //todo use properties and type to create file with header
+
     public <T extends Record> void writeCsv(T record, RecordType type, String filename) {
         Path path = Paths.get(filename);
         if (Files.exists(path)) {

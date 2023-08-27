@@ -18,7 +18,6 @@ public class VkService {
     private VkRepository vkRepository;
     private CsvProperties csvProperties;
 
-    //todo send image to ML model, get answer and convert to domain model
     public Long uploadVkImage(MultipartFile image, String vkLink) {
         VkRecord vkRecord = new VkRecord();
 
