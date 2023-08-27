@@ -34,3 +34,5 @@ http://51.250.22.177:8080/swagger-ui/index.html - Swagger UI
 Ссылка на гитхаб с моделью:
 https://github.com/BogdanLiutikov/TopBlog-ML
 
+Ссылка на демо сервера:
+https://drive.google.com/file/d/1a1WScVGUC0w-Uim68oZDBsG6_zL-X-A0/view?usp=sharing
